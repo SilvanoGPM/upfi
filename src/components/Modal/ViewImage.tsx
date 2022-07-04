@@ -29,11 +29,11 @@ export function ModalViewImage({
         mt="2.5rem"
         w="auto"
         h="auto"
-        maxW="900px"
+        maxW={['300px', '500px', '900px']}
         maxH="600px"
       >
         <ModalBody p="0">
-          <Image src={imgUrl} maxW="900px" maxH="600px" />
+          <Image src={imgUrl} maxW={['300px', '500px', '900px']} maxH="600px" />
         </ModalBody>
 
         <ModalFooter justifyContent="start" bg="gray.800" p="4">
