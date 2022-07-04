@@ -184,7 +184,7 @@ const FileInputBase: ForwardRefRenderFunction<
             ) : (
               <Box pos="relative" h="full">
                 {!!error && (
-                  <Tooltip label={error.message} bg="red.500">
+                  <Tooltip label={String(error.message)} bg="red.500">
                     <FormErrorMessage
                       pos="absolute"
                       right={2}

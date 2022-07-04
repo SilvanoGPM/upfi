@@ -50,7 +50,7 @@ const TextInputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
       />
 
       {!!error && (
-        <Tooltip label={error.message} bg="red.500">
+        <Tooltip label={String(error.message)} bg="red.500">
           <FormErrorMessage ml={-6} mt={0} zIndex="tooltip">
             <Icon as={FiAlertCircle} color="red.500" w={4} h={4} />
           </FormErrorMessage>
