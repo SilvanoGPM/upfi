@@ -17,7 +17,7 @@ interface ImageType {
 }
 
 interface GetImageResponse {
-  data: ImageType;
+  data: ImageType[];
   after: string | null;
 }
 
@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
   );
 
   const formattedData = useMemo(() => {
-    return data?.pages.map(response => response.data) || [];
+    return data?.pages.map(response => response.data).flat() || [];
   }, [data]);
 
   if (isLoading) {
